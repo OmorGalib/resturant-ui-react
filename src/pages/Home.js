@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../components/Header';
-import Banner from '../components/Banner';
-import About from '../components/About';
-import Popular from '../components/Popular';
-import Form from '../components/Form';
-import Testimonial from '../components/Testimonial';
-import Footer from '../components/Footer';
+import Header from '../components/Header/Header';
+import Banner from '../components/Banner/Banner';
+import About from '../components/About/About';
+import Popular from '../components/Popular/Popular';
+import Form from '../components/Form/Form';
+import Testimonial from '../components/Testimonial/Testimonial';
+import Footer from '../components/Footer/Footer';
 
 
 const Home = () => (
