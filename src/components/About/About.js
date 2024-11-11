@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+
+import React, { useState } from 'react';
 import aboutImge from "../../assets/about-img.png";
 
 const About = () => {
