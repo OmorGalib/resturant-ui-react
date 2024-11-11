@@ -23,12 +23,12 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 px-4 py-5 z-20 text-white bg-no-repeat bg-cover bg-center transition-all duration-300 ${
+      className={`sticky top-0 px-4 py-3 z-20 text-white bg-no-repeat bg-cover bg-center transition-all duration-300 ${
         isScrolled ? "bg-red-700" : "bg-transparent"
       }`}
       style={isScrolled ? { backgroundImage: `url(${bgImage})` } : {}}
     >
-      <div className="container mx-auto px-10 flex justify-between items-center">
+      <div className="container mx-auto px-10 flex justify-between items-center bg-slate-600">
         <div className="flex items-center gap-20">
           {/* Logo Section */}
           <div className="flex gap-1 items-center">
@@ -96,7 +96,7 @@ const Header = () => {
         </nav>
 
         {/* Book A Table Button */}
-        <button className="hidden md:block bg-yellow-400 px-6 py-2 text-base text-black font-semibold uppercase">
+        <button className="hidden md:block bg-yellow-400 px-4 py-2 text-nowrap text-base text-black font-semibold uppercase">
           Book A Table
         </button>
       </div>
