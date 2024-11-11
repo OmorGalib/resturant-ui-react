@@ -1,50 +1,3 @@
-// import React from "react";
-// import logo from "../../assets/logo.png"
-// import bgImage from "../../assets/Rectangle4.png";
-// const Header = () => (
-//   <header className="sticky top-0  px-4 py-5 z-20 text-white bg-red-700 bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${bgImage})`}} >
-//     <div className="container mx-auto px-10 flex justify-between items-center">
-//       <div className="flex items-center gap-20">
-//         <div className="flex gap-1 items-center">
-//           <img src={logo} alt="Logo" className="w-6 h-6" />
-//           <h1 className="text-2xl font-semibold">
-//             Restau<span className="font-medium">rant</span>
-//           </h1>
-//         </div>
-//         <nav>
-//           <ul className="flex space-x-6 text-normal">
-//             <li>
-//               <a href="/">Home</a>
-//             </li>
-//             <li>
-//               <a href="/">About</a>
-//             </li>
-//             <li>
-//               <a href="/">Portfolio</a>
-//             </li>
-//             <li>
-//               <a href="/">Clients</a>
-//             </li>
-//             <li>
-//               <a href="/">Blog</a>
-//             </li>
-//             <li>
-//               <a href="/">Contact</a>
-//             </li>
-//           </ul>
-//         </nav>
-//       </div>
-//       <button className="bg-yellow-400 px-6 py-2 text-base text-black font-semibold uppercase">
-//         Book A Table
-//       </button>
-//     </div>
-//   </header>
-// );
-
-// export default Header;
-
-
-
 
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/logo.png";
@@ -52,20 +5,21 @@ import bgImage from "../../assets/Rectangle4.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Monitor scroll event
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Toggle mobile menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header
@@ -76,24 +30,73 @@ const Header = () => {
     >
       <div className="container mx-auto px-10 flex justify-between items-center">
         <div className="flex items-center gap-20">
+          {/* Logo Section */}
           <div className="flex gap-1 items-center">
             <img src={logo} alt="Logo" className="w-6 h-6" />
             <h1 className="text-2xl font-semibold">
               Restau<span className="font-medium">rant</span>
             </h1>
           </div>
-          <nav>
-            <ul className="flex space-x-6 text-normal">
-              <li><a href="/">Home</a></li>
-              <li><a href="/">About</a></li>
-              <li><a href="/">Portfolio</a></li>
-              <li><a href="/">Clients</a></li>
-              <li><a href="/">Blog</a></li>
-              <li><a href="/">Contact</a></li>
-            </ul>
-          </nav>
+
+          {/* Hamburger Icon / Cross Icon */}
+          <button
+            onClick={toggleMenu}
+            className="block md:hidden text-white focus:outline-none"
+          >
+            {isMenuOpen ? (
+              // Cross Icon (X)
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              // Hamburger Icon
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </button>
         </div>
-        <button className="bg-yellow-400 px-6 py-2 text-base text-black font-semibold uppercase">
+
+        {/* Navigation Menu with Smooth Transition */}
+        <nav
+          className={`${
+            isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          } absolute top-16 left-0 w-full overflow-hidden transition-all duration-500 ease-in-out bg-red-700 md:static md:block md:max-h-full md:opacity-100 md:bg-transparent`}
+        >
+          <ul className="flex flex-col md:flex-row md:space-x-6 text-normal md:bg-transparent">
+            <li className="py-2 md:py-0 md:px-4 pl-6 hover:bg-orange-500"><a href="/">Home</a></li>
+            <li className="py-2 md:py-0 md:px-4 pl-6 hover:bg-orange-500"><a href="/">About</a></li>
+            <li className="py-2 md:py-0 md:px-4 pl-6 hover:bg-orange-500"><a href="/">Portfolio</a></li>
+            <li className="py-2 md:py-0 md:px-4 pl-6 hover:bg-orange-500"><a href="/">Clients</a></li>
+            <li className="py-2 md:py-0 md:px-4 pl-6 hover:bg-orange-500"><a href="/">Blog</a></li>
+            <li className="py-2 md:py-0 md:px-4 pl-6 hover:bg-orange-500"><a href="/">Contact</a></li>
+          </ul>
+        </nav>
+
+        {/* Book A Table Button */}
+        <button className="hidden md:block bg-yellow-400 px-6 py-2 text-base text-black font-semibold uppercase">
           Book A Table
         </button>
       </div>
