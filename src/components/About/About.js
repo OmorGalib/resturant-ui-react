@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import aboutImge from "../assets/about-img.png";
+import aboutImge from "../../assets/about-img.png";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState('overview');
