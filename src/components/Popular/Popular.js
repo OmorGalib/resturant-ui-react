@@ -42,9 +42,9 @@ const Popular = () => {
   return (
     <section className="py-28 bg-[#f9f4ef] relative">
       <div className="container mx-auto px-10 relative">
-        <div className="flex items-center gap-2">
-          <img src={ boxShape } className="mb-1"/>
-          <h2 className="text-red-600 text-lg font-semibold mb-2"> Crispy, Every Bite Taste</h2>
+        <div className="flex items-center gap-2 mb-4">
+          <img src={ boxShape } />
+          <h2 className="text-red-600 text-lg font-semibold"> Crispy, Every Bite Taste</h2>
         </div>
         <h1 className="text-5xl font-bold mb-8 uppercase">Popular Food Items</h1>
         
@@ -56,9 +56,9 @@ const Popular = () => {
               style={{ transform: `translateX(-${(currentIndex % items.length) * (100 / itemsToShow)}%)` }}
             >
               {items.map((item, index) => (
-                <div key={index} className="flex-shrink-0 w-1/4 p-4">
-                  <div className="bg-white shadow-lg rounded-lg p-6 text-center">
-                    <img src={item.image} alt={item.title} className="mx-auto mb-4 w-24 h-24 object-cover" />
+                <div key={index} className="flex-shrink-0 w-1/4 p-4 ">
+                  <div className="bg-white shadow-lg rounded-lg px-3 py-8 text-center">
+                    <img src={item.image} alt={item.title} className="mx-auto mb-4 w-25 h-24 object-cover" />
                     <hr className="my-4 border-t-2 border-red-600 w-8 mx-auto" />
                     <h3 className="font-bold text-lg mb-2">{item.title}</h3>
                     <p className="text-gray-500">{item.description}</p>
