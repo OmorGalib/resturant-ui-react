@@ -12,14 +12,14 @@ const About = () => {
     setActiveTab(tab);
   };
   return (
-    <section className="container mx-auto px-10 py-20">
+    <section className="container mx-auto p-4 sm:px-10 sm:py-20">
       <div className="container mx-auto ">
         <div className="gap-12 md:flex justify-between">
           <div className="w-full md:w-[900px] mx-auto">
             <img src={aboutImge} alt="About Image" />
           </div>
           {/* ===================== */}
-          <div className="container mx-auto">
+          <div className="container mx-auto mt-4 sm:mt-0">
             {/* Tab Header */}
             <div className="flex space-x-4 border-b-2 border-red-700">
               {tabs.map((tab) => (
@@ -38,7 +38,7 @@ const About = () => {
             </div>
 
             {/* Tab Content */}
-            <div className="mt-6">
+            <div className=" mt-4 sm:mt-6">
               {activeTab === "About" && (
                 <div>
                   {/* Heading */}
@@ -47,7 +47,7 @@ const About = () => {
                   </h2>
 
                   {/* Paragraph */}
-                  <p className="mt-6 text-gray-700 mb-6 leading-relaxed">
+                  <p className="text-base mt-6 text-gray-700 mb-6 leading-relaxed">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Ornare non sed est cursus. Vel hac convallis ipsum, facilisi
                     odio pellentesque bibendum viverra tempus. Lorem ipsum dolor
@@ -57,9 +57,9 @@ const About = () => {
                   </p>
 
                   {/* Button and Phone Number */}
-                  <div className="flex items-start sm:items-center gap-4">
+                  <div className="flex items-center gap-4">
                     {/* Button */}
-                    <button className="bg-yellow-400 text-black font-semibold py-2 px-6 hover:bg-yellow-500 transition">
+                    <button className="bg-yellow-400 text-base text-black font-semibold py-2 px-6 hover:bg-yellow-500 transition">
                       ABOUT MORE
                     </button>
 
@@ -97,7 +97,7 @@ const About = () => {
           </div>
           {/* ===================== */}
         </div>
-        <div className="flex flex-col mt-16 md:flex-row justify-between items-start gap-8">
+        <div className="flex flex-col mt-6 sm:mt-16 md:flex-row justify-between items-start gap-6">
           {/* Fast Delivery */}
           <div className="flex items-center gap-4">
             {/* Icon Wrapper */}

@@ -21,8 +21,19 @@ const Popular = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsToShow, setItemsToShow] = useState(4);
 
-  const itemsToShow = 4;
+  useEffect(() => {
+    // Adjust itemsToShow based on screen size
+    const updateItemsToShow = () => {
+      setItemsToShow(window.innerWidth < 768 ? 1 : 4);
+    };
+
+    updateItemsToShow(); // Set initial value
+    window.addEventListener("resize", updateItemsToShow);
+
+    return () => window.removeEventListener("resize", updateItemsToShow);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -40,13 +51,13 @@ const Popular = () => {
   };
 
   return (
-    <section className="py-28 bg-[#f9f4ef] relative">
-      <div className="container mx-auto px-10 relative">
+    <section className="pt-10 pb-24 sm:py-28 bg-[#f9f4ef] relative">
+      <div className="container mx-auto px-4 sm:px-10 relative">
         <div className="flex items-center gap-2 mb-4">
-          <img src={ boxShape } />
-          <h2 className="text-red-600 text-lg font-semibold"> Crispy, Every Bite Taste</h2>
+          <img src={boxShape} alt="Decorative" />
+          <h2 className="text-red-600 text-lg font-semibold">Crispy, Every Bite Taste</h2>
         </div>
-        <h1 className="text-5xl font-bold mb-8 uppercase">Popular Food Items</h1>
+        <h1 className="text-3xl sm:text-5xl font-bold mb-8 uppercase">Popular Food Items</h1>
         
         <div className="flex items-center justify-center">
           {/* Carousel */}
@@ -56,7 +67,10 @@ const Popular = () => {
               style={{ transform: `translateX(-${(currentIndex % items.length) * (100 / itemsToShow)}%)` }}
             >
               {items.map((item, index) => (
-                <div key={index} className="flex-shrink-0 w-1/4 p-4 ">
+                <div
+                  key={index}
+                  className={`flex-shrink-0 p-4 ${itemsToShow === 1 ? 'w-full' : 'w-1/4'}`}
+                >
                   <div className="bg-white shadow-lg rounded-lg px-3 py-8 text-center">
                     <img src={item.image} alt={item.title} className="mx-auto mb-4 w-25 h-24 object-cover" />
                     <hr className="my-4 border-t-2 border-red-600 w-8 mx-auto" />
@@ -69,23 +83,23 @@ const Popular = () => {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="absolute top-6 right-16 flex space-x-2">
+          <div className="absolute -bottom-16 sm:top-6 sm:right-16 flex space-x-2">
             <button
               onClick={handlePrevious}
-              className="bg-white rounded-full py-5 px-6 shadow-lg hover:bg-gray-100 focus:outline-none"
+              className="h-fit bg-white rounded-full py-5 px-6 shadow-lg hover:bg-gray-100 focus:outline-none"
             >
-              <img src={previousIcon}/>
+              <img src={previousIcon} alt="Previous" />
             </button>
             <button
               onClick={handleNext}
-              className="bg-white rounded-full py-5 px-6 shadow-lg hover:bg-gray-100 focus:outline-none"
+              className="h-fit bg-white rounded-full py-5 px-6 shadow-lg hover:bg-gray-100 focus:outline-none"
             >
-              <img src={nextIcon}/>
+              <img src={nextIcon} alt="Next" />
             </button>
           </div>
         </div>
       </div>
-      <img src={saladShape} className="absolute left-0 top-1/4"/>
+      <img src={saladShape} alt="Decorative Shape" className="hidden md:block absolute left-0 top-1/4"/>
     </section>
   );
 };

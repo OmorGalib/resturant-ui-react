@@ -15,20 +15,20 @@ const Form = () => {
   };
 
   return (
-    <section className="py-28 bg-repeat bg-cover" style={{ backgroundImage: `url(${bgForm})`}}>
-      <div className="container mx-auto px-10 text-white">
+    <section className="py-10 sm:py-28 bg-repeat bg-cover bg-center" style={{ backgroundImage: `url(${bgForm})`}}>
+      <div className="container mx-auto px-4 sm:px-10 text-white">
         <div className="flex items-center gap-2 mb-4">
           <img src={ boxShape } />
           <h2 className="text-red-600 text-base font-semibold ">Book Now</h2>
         </div>
-        <h3 className="text-6xl font-semibold mb-6 uppercase ">Book Your Table</h3>
-        <p className="text-lg font-light mb-6 w-5/12">Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.</p>
-        <form onSubmit={handleSubmit} className="space-y-5 w-2/4">
-          <div className="flex gap-5">
+        <h3 className="text-4xl sm:text-6xl font-semibold mb-4 sm:mb-6 uppercase ">Book Your Table</h3>
+        <p className="text-lg font-light mb-6 sm:w-5/12">Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.</p>
+        <form onSubmit={handleSubmit} className="space-y-5 sm:w-2/4">
+          <div className="flex gap-5 flex-col sm:flex-row">
             <input type="text" name="name" placeholder="Your Name" onChange={handleChange} className="w-full p-2 border border-gray-300 bg-transparent h-12" />
             <input type="email" name="email" placeholder="Your Email" onChange={handleChange} className="w-full p-2 border border-gray-300 bg-transparent h-12" />
           </div>
-          <div className="flex gap-5">
+          <div className="flex gap-5 flex-col sm:flex-row">
             <input type="date" name="date" placeholder="Reservation Date" onChange={handleChange} className="w-full p-2 border border-gray-300 bg-transparent h-12" />
             <input type="number" name="number" placeholder="Total People" onChange={handleChange} className="w-full p-2 border border-gray-300 bg-transparent h-12" />
           </div>
