@@ -15,11 +15,11 @@ const About = () => {
     <section className="container mx-auto px-10 py-20">
       <div className="container mx-auto ">
         <div className="gap-12 md:flex justify-between">
-          <div className="w-full md:w-[900px] mx-auto">
+          <div className="w-full md:w-[1200px] mx-auto">
             <img src={aboutImge} alt="About Image" />
           </div>
           {/* ===================== */}
-          <div className="container mx-auto">
+          <div className="container mx-auto mt-10 md:mt-0">
             {/* Tab Header */}
             <div className="flex space-x-4 border-b-2 border-red-700">
               {tabs.map((tab) => (
@@ -57,16 +57,16 @@ const About = () => {
                   </p>
 
                   {/* Button and Phone Number */}
-                  <div className="flex items-start sm:items-center gap-4">
+                  <div className="flex items-center sm:items-center gap-6">
                     {/* Button */}
-                    <button className="bg-yellow-400 text-black font-semibold py-2 px-6 hover:bg-yellow-500 transition">
+                    <button className="bg-yellow-400 text-black text-sm md:text-lg text-nowrap font-semibold py-2 px-6 hover:bg-yellow-500 transition">
                       ABOUT MORE
                     </button>
 
                     {/* Phone Number */}
                     <div className="flex items-center gap-2">
                       <FaPhoneAlt className="text-red-500 text-xl" />
-                      <span className="font-semibold text-lg text-gray-800">
+                      <span className="font-semibold text-sm text-gray-800 text-nowrap md:text-lg">
                         +88 3426 739 485
                       </span>
                     </div>
@@ -119,8 +119,8 @@ const About = () => {
             </div>
             {/* Text Content */}
             <div>
-              <h3 className="font-bold text-gray-900 text-lg">FAST DELIVERY</h3>
-              <p className="text-gray-600 text-sm">Within 30 minutes</p>
+              <h3 className="font-bold text-gray-900 text-lg">ABSOLUTE DINING</h3>
+              <p className="text-gray-600 text-sm">Best buffet restaurant</p>
             </div>
           </div>
 
@@ -132,8 +132,8 @@ const About = () => {
             </div>
             {/* Text Content */}
             <div>
-              <h3 className="font-bold text-gray-900 text-lg">FAST DELIVERY</h3>
-              <p className="text-gray-600 text-sm">Within 30 minutes</p>
+              <h3 className="font-bold text-gray-900 text-lg">PICKUP DELIVERY</h3>
+              <p className="text-gray-600 text-sm">Grab your food order</p>
             </div>
           </div>
         </div>
