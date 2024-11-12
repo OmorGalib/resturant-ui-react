@@ -1,6 +1,7 @@
-
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import aboutImge from "../../assets/about-img.png";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaBox, FaUtensils, FaShoppingBag } from "react-icons/fa";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("About");
@@ -11,14 +12,14 @@ const About = () => {
     setActiveTab(tab);
   };
   return (
-    <section className="py-16 bg-white">
+    <section className="container mx-auto px-10 py-20">
       <div className="container mx-auto ">
-        <div className="flex justify-between">
-          <div>
+        <div className="gap-12 md:flex justify-between">
+          <div className="w-full md:w-[900px] mx-auto">
             <img src={aboutImge} alt="About Image" />
           </div>
           {/* ===================== */}
-          <div className="container mx-auto px-4 py-8">
+          <div className="container mx-auto">
             {/* Tab Header */}
             <div className="flex space-x-4 border-b-2 border-red-700">
               {tabs.map((tab) => (
@@ -40,14 +41,36 @@ const About = () => {
             <div className="mt-6">
               {activeTab === "About" && (
                 <div>
-                  <h2 className="text-2xl font-bold">
-                    Exceptional Culinary Experience
+                  {/* Heading */}
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+                    EXCEPTIONAL CULINARY EXPERIENCE AND DELICIOUS FOOD
                   </h2>
-                  <p className="mt-4 text-gray-700">
+
+                  {/* Paragraph */}
+                  <p className="mt-6 text-gray-700 mb-6 leading-relaxed">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Omare non sed est cursus. Vel hac convallis ipsum, facilisi
-                    odio pellentesque bibendum viverra tempus.
+                    Ornare non sed est cursus. Vel hac convallis ipsum, facilisi
+                    odio pellentesque bibendum viverra tempus. Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit do eiusmod tempor
+                    incididunt ut labore et dolore magna minim veniam nostrud
+                    exercitation.
                   </p>
+
+                  {/* Button and Phone Number */}
+                  <div className="flex items-start sm:items-center gap-4">
+                    {/* Button */}
+                    <button className="bg-yellow-400 text-black font-semibold py-2 px-6 hover:bg-yellow-500 transition">
+                      ABOUT MORE
+                    </button>
+
+                    {/* Phone Number */}
+                    <div className="flex items-center gap-2">
+                      <FaPhoneAlt className="text-red-500 text-xl" />
+                      <span className="font-semibold text-lg text-gray-800">
+                        +88 3426 739 485
+                      </span>
+                    </div>
+                  </div>
                 </div>
               )}
               {activeTab === "Experience" && (
@@ -73,6 +96,46 @@ const About = () => {
             </div>
           </div>
           {/* ===================== */}
+        </div>
+        <div className="flex flex-col mt-16 md:flex-row justify-between items-start gap-8">
+          {/* Fast Delivery */}
+          <div className="flex items-center gap-4">
+            {/* Icon Wrapper */}
+            <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md">
+              <FaBox className="text-red-500 text-2xl" />
+            </div>
+            {/* Text Content */}
+            <div>
+              <h3 className="font-bold text-gray-900 text-lg">FAST DELIVERY</h3>
+              <p className="text-gray-600 text-sm">Within 30 minutes</p>
+            </div>
+          </div>
+
+          {/* Absolute Dining */}
+          <div className="flex items-center gap-4">
+            {/* Icon Wrapper */}
+            <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md">
+              <FaUtensils className="text-red-500 text-2xl" />
+            </div>
+            {/* Text Content */}
+            <div>
+              <h3 className="font-bold text-gray-900 text-lg">FAST DELIVERY</h3>
+              <p className="text-gray-600 text-sm">Within 30 minutes</p>
+            </div>
+          </div>
+
+          {/* Pickup Delivery */}
+          <div className="flex items-center gap-4">
+            {/* Icon Wrapper */}
+            <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md">
+              <FaShoppingBag className="text-red-500 text-2xl" />
+            </div>
+            {/* Text Content */}
+            <div>
+              <h3 className="font-bold text-gray-900 text-lg">FAST DELIVERY</h3>
+              <p className="text-gray-600 text-sm">Within 30 minutes</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
