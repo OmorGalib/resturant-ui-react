@@ -57,7 +57,7 @@ const Popular = () => {
           <img src={boxShape} alt="Decorative" />
           <h2 className="text-red-600 text-lg font-semibold">Crispy, Every Bite Taste</h2>
         </div>
-        <h1 className="text-3xl sm:text-5xl font-bold mb-8 uppercase">Popular Food Items</h1>
+        <h1 className="text-4xl sm:text-6xl mb-8 uppercase font-bebas">Popular Food Items</h1>
         
         <div className="flex items-center justify-center">
           {/* Carousel */}

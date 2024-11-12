@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import aboutImge from "../../assets/about-img.png";
+import MarketPlace from "../../assets/Market-Place.png";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaBox, FaUtensils, FaShoppingBag } from "react-icons/fa";
 
@@ -15,10 +16,13 @@ const About = () => {
     <section className="container mx-auto p-4 sm:px-10 sm:py-20">
       <div className="container mx-auto ">
         <div className="gap-12 md:flex justify-between">
-          <div className="w-full md:w-[900px] mx-auto">
+          <div className="relative w-full md:w-[1200px] mx-auto">
             <img src={aboutImge} alt="About Image" />
+            <img src={MarketPlace} alt="MarketPlace Image" className="absolute top-4 w-40 sm:w-72 sm:top-7 " />
           </div>
           {/* ===================== */}
+
+
           <div className="container mx-auto mt-4 sm:mt-0">
             {/* Tab Header */}
             <div className="flex space-x-4 border-b-2 border-red-700">
@@ -42,12 +46,12 @@ const About = () => {
               {activeTab === "About" && (
                 <div>
                   {/* Heading */}
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+                  <h2 className="text-5xl sm:text-3xl md:text-7xl  text-black md:leading-tight font-bebas">
                     EXCEPTIONAL CULINARY EXPERIENCE AND DELICIOUS FOOD
                   </h2>
 
                   {/* Paragraph */}
-                  <p className="text-base mt-6 text-gray-700 mb-6 leading-relaxed">
+                  <p className="text-base mt-6 text-gray-700 mb-6 leading-relaxed md:text-lg">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Ornare non sed est cursus. Vel hac convallis ipsum, facilisi
                     odio pellentesque bibendum viverra tempus. Lorem ipsum dolor
@@ -57,7 +61,9 @@ const About = () => {
                   </p>
 
                   {/* Button and Phone Number */}
-                  <div className="flex items-center gap-4">
+
+                  
+                  <div className="flex items-center justify-between md:gap-4 md:justify-normal">
                     {/* Button */}
                     <button className="bg-yellow-400 text-base text-black font-semibold py-2 px-6 hover:bg-yellow-500 transition">
                       ABOUT MORE
@@ -66,7 +72,7 @@ const About = () => {
                     {/* Phone Number */}
                     <div className="flex items-center gap-2">
                       <FaPhoneAlt className="text-red-500 text-xl" />
-                      <span className="font-semibold text-lg text-gray-800">
+                      <span className="font-semibold text-base text-gray-800 text-nowrap md:text-lg">
                         +88 3426 739 485
                       </span>
                     </div>
@@ -101,39 +107,39 @@ const About = () => {
           {/* Fast Delivery */}
           <div className="flex items-center gap-4">
             {/* Icon Wrapper */}
-            <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md">
-              <FaBox className="text-red-500 text-2xl" />
+            <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md md:w-24 md:h-24">
+              <FaBox className="text-red-500 text-2xl md:text-4xl" />
             </div>
             {/* Text Content */}
             <div>
-              <h3 className="font-bold text-gray-900 text-lg">FAST DELIVERY</h3>
-              <p className="text-gray-600 text-sm">Within 30 minutes</p>
+              <h3 className="text-gray-900 text-lg md:text-3xl font-bebas">FAST DELIVERY</h3>
+              <p className="text-gray-600 text-sm md:text-lg">Within 30 minutes</p>
             </div>
           </div>
 
           {/* Absolute Dining */}
           <div className="flex items-center gap-4">
             {/* Icon Wrapper */}
-            <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md">
-              <FaUtensils className="text-red-500 text-2xl" />
+            <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md md:w-24 md:h-24">
+              <FaUtensils className="text-red-500 text-2xl md:text-4xl" />
             </div>
             {/* Text Content */}
             <div>
-              <h3 className="font-bold text-gray-900 text-lg">FAST DELIVERY</h3>
-              <p className="text-gray-600 text-sm">Within 30 minutes</p>
+              <h3 className="text-gray-900 text-lg md:text-3xl font-bebas">ABSOLUTE DINING</h3>
+              <p className="text-gray-600 text-sm md:text-lg">Best buffet restaurant</p>
             </div>
           </div>
 
           {/* Pickup Delivery */}
           <div className="flex items-center gap-4">
             {/* Icon Wrapper */}
-            <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md">
-              <FaShoppingBag className="text-red-500 text-2xl" />
+            <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md md:w-24 md:h-24">
+              <FaShoppingBag className="text-red-500 text-2xl md:text-4xl" />
             </div>
             {/* Text Content */}
             <div>
-              <h3 className="font-bold text-gray-900 text-lg">FAST DELIVERY</h3>
-              <p className="text-gray-600 text-sm">Within 30 minutes</p>
+              <h3 className="text-gray-900 text-lg md:text-3xl font-bebas">PICKUP DELIVERY</h3>
+              <p className="text-gray-600 text-sm md:text-lg">Grab your food order</p>
             </div>
           </div>
         </div>

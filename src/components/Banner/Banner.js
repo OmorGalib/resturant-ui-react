@@ -11,26 +11,26 @@ const Banner = () => (
   >
     <div className="container mx-auto px-4 sm:px-10 sm:flex justify-between relative">
       <div className="text-white flex flex-col justify-center">
-        <h1 className="sm:bg-gradient-to-r from-transparent to-red-700/50 text-wrap font-bold sm:absolute top-11 left-0 text-5xl sm:text-8xl sm:z-10  sm:ml-10 uppercase sm:py-4 sm:pr-7 ">
+        <h1 className="sm:bg-gradient-to-r sm:z-20 from-transparent to-red-700/50 text-wrap sm:absolute top-11 left-0 text-5xl sm:text-[145px] sm:z-10  sm:ml-10 uppercase sm:py-4 sm:pr-7 font-bebas">
           Taste The Authentic <br /> Saudi Cuisine
         </h1>
-        <p className="text-lg sm:text-2xl my-6 sm:mb-10  sm:mt-32 text-wrap font-medium sm:w-9/12">
+        <p className="text-xl sm:text-2xl my-6 sm:mb-10  sm:mt-72 text-wrap font-medium sm:w-9/12">
           Among the best saudi chefs in the world, serving you something beyond
           flavor
         </p>
-        <button className="bg-yellow-400 mb-6 px-8 py-2 text-base text-black font-semibold uppercase w-fit">
+        <button className="bg-yellow-400 mb-6 px-6 py-4 text-base text-black font-bold uppercase w-fit">
           Explore Menu
         </button>
       </div>
       <div className="relative">
-        <img src={bannerImage} alt="Banner Image" />
-        <div className="absolute bottom-2 right-2 sm:-right-14 bg-yellow-400 rounded-full p-2">
-          <img src={offerTag} alt="Today Offer" className="w-14 sm:w-32"/>
+        <img src={bannerImage} alt="Banner Image" className="relative my-10 sm:my-0 z-10" />
+        <div className="absolute bottom-0 right-2 sm:-right-14 bg-yellow-400 rounded-full p-2 sm:z-20">
+          <img src={offerTag} alt="Today Offer" className="w-14 sm:w-32" />
         </div>
         <img
           src={flowerTag}
           alt="Flower Tag"
-          className="absolute sm:-top-7 sm:-right-6 -top-4 -right-4"
+          className="absolute sm:-top-7 sm:-right-6 -top-5 right-0  sm:z-20 "
         />
       </div>
     </div>

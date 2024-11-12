@@ -21,7 +21,7 @@ const Form = () => {
           <img src={ boxShape } />
           <h2 className="text-red-600 text-base font-semibold ">Book Now</h2>
         </div>
-        <h3 className="text-4xl sm:text-6xl font-semibold mb-4 sm:mb-6 uppercase ">Book Your Table</h3>
+        <h3 className="text-4xl sm:text-6xl mb-4 sm:mb-6 uppercase font-bebas">Book Your Table</h3>
         <p className="text-lg font-light mb-6 sm:w-5/12">Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.</p>
         <form onSubmit={handleSubmit} className="space-y-5 sm:w-2/4">
           <div className="flex gap-5 flex-col sm:flex-row">

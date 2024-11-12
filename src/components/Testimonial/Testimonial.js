@@ -36,7 +36,7 @@ const Testimonial = () => {
           <img src={boxShape} alt="Box Shape" />
           <h2 className="text-red-600 text-lg font-semibold">Crispy, Every Bite Taste</h2>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold sm:mb-8 uppercase">What Some of Our Customers Say</h1>
+        <h1 className="text-3xl sm:text-6xl sm:mb-8 uppercase font-bebas">What Some of Our Customers Say</h1>
         
         <div className="flex items-center justify-center">
           {/* Slider Content */}

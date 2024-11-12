@@ -8,7 +8,6 @@ import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
-  FaYoutube,
   FaLinkedin,
 } from "react-icons/fa";
 
@@ -22,7 +21,7 @@ const Footer = () => (
 
     <div className="container mx-auto text-white">
       {/* Heading */}
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+      <h2 className="text-2xl md:text-5xl text-center mb-10 font-bebas">
         WE ARE READY TO PROVIDE YOU THE BEST DINING EXPERIENCES
       </h2>
 
@@ -63,19 +62,16 @@ const Footer = () => (
 
       {/* Social Icons */}
       <div className="flex justify-center space-x-4 mt-20">
-        <a href="/" className="hover:text-yellow-400 p-2 border-solid border-2 rounded-full border-white hover:border-yellow-400">
+        <a href="/" className="hover:bg-amber-400 hover:text-black p-2 md:p-3 md:text-xl border-solid border-2 rounded-full border-white hover:border-yellow-400 ">
           <FaFacebookF />
         </a>
-        <a href="/" className="hover:text-yellow-400 p-2 border-solid border-2 rounded-full border-white hover:border-yellow-400">
+        <a href="/" className="hover:bg-amber-400 hover:text-black p-2 md:p-3 md:text-xl border-solid border-2 rounded-full border-white hover:border-yellow-400">
           <FaTwitter />
         </a>
-        <a href="/" className="hover:text-yellow-400 p-2 border-solid border-2 rounded-full border-white hover:border-yellow-400">
+        <a href="/" className="hover:bg-amber-400 hover:text-black p-2 md:p-3 md:text-xl border-solid border-2 rounded-full border-white hover:border-yellow-400">
           <FaInstagram />
         </a>
-        <a href="/" className="hover:text-yellow-400 p-2 border-solid border-2 rounded-full border-white hover:border-yellow-400">
-          <FaYoutube />
-        </a>
-        <a href="/" className="hover:text-yellow-400 p-2 border-solid border-2 rounded-full border-white hover:border-yellow-400">
+        <a href="/" className="hover:bg-amber-400 hover:text-black p-2 md:p-3 md:text-xl border-solid border-2 rounded-full border-white hover:border-yellow-400">
           <FaLinkedin />
         </a>
       </div>
