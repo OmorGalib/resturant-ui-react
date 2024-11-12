@@ -28,8 +28,8 @@ const Header = () => {
       }`}
       style={isScrolled ? { backgroundImage: `url(${bgImage})` } : {}}
     >
-      <div className="container mx-auto px-10 flex justify-between items-center">
-        <div className="flex items-center gap-20">
+      <div className="container mx-auto  px-0 sm:px-10 flex justify-between items-center">
+        <div className="flex justify-between w-full sm:w-0">
           {/* Logo Section */}
           <div className="flex gap-1 items-center">
             <img src={logo} alt="Logo" className="w-6 h-6" />
@@ -83,7 +83,7 @@ const Header = () => {
         <nav
           className={`${
             isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-          } absolute top-16 left-0 w-[600px] overflow-hidden transition-all duration-500 ease-in-out bg-red-700 md:static md:block md:max-h-full md:opacity-100 md:bg-transparent`}
+          } absolute top-14 left-0 w-[600px] overflow-hidden transition-all duration-500 ease-in-out bg-red-700 md:static md:block md:max-h-full md:opacity-100 md:bg-transparent`}
         >
           <ul className="flex flex-col md:flex-row md:space-x-6 text-normal md:bg-transparent">
             <li className="py-2 md:py-0 md:px-4 pl-6 hover:bg-yellow-400 hover:text-slate-950"><a href="/">Home</a></li>
